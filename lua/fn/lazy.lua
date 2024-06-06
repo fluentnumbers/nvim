@@ -21,4 +21,4 @@ require("lazy").setup({ { import = "fn.plugins" }, { import = "fn.plugins.lsp" }
   },
 })
 
-require("langmapper").automapping({ global = true, buffer = true })
+-- require("langmapper").automapping({ global = true, buffer = true })
