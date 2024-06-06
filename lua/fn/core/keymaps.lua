@@ -102,6 +102,6 @@ vim.keymap.set("n", "L", "$", { desc = "EoL ($)" })
 vim.keymap.set("n", "Y", "y$", { desc = "Yank until EoL" })
 
 -- Map p in visual mode to paste over the selected text without affecting the default register
-vim.keymap.set("n", "p", 'Paste in V without changing the reg ("_dP)')
+vim.keymap.set("v", "p", "_dP", { desc = 'Paste in V without changing the reg ("_dP)' })
 
 vim.keymap.set("n", "<leader>j", "J", { desc = "Join lines" })
