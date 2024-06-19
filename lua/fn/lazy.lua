@@ -11,7 +11,15 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup({ { import = "fn.plugins" }, { import = "fn.plugins.lsp" } }, {
+require("lazy").setup({
+  { import = "fn.plugins" },
+   { import = "fn.plugins.lsp" },
+   { import = "fn.plugins.extras.coding.copilot" },
+  { import = "fn.plugins.extras.coding.copilot-chat" },
+    { import = "fn.plugins.extras.dap.core" },
+
+   },
+   {
   checker = {
     enabled = true,
     notify = false,

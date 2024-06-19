@@ -33,6 +33,7 @@ return {
         -- "tailwindcss",
         -- "svelte",
         "lua_ls",
+        "yamlls",
         -- "graphql",
         -- "emmet_ls",
         -- "prismals",
@@ -47,6 +48,9 @@ return {
         "isort", -- python formatter
         "black", -- python formatter
         "pylint",
+        "flake8",
+        "mypy",
+        "debugpy",
         -- "eslint_d",
       },
     })

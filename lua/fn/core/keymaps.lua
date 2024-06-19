@@ -20,7 +20,16 @@ keymap.set("n", "<leader>+", "<C-a>", { desc = "Increment number" }) -- incremen
 keymap.set("n", "<leader>-", "<C-x>", { desc = "Decrement number" }) -- decrement
 
 -- file operations
-keymap.set("n", "<leader>w", ":w<CR>", { desc = "[W]rite file" })
+keymap.set("n", "<leader>ww", ":w<CR>", { desc = "[W]rite file" })
+keymap.set("n", "<leader>wq", ":wq<CR>") -- save and quit
+
+-- Quickfix keymaps
+keymap.set("n", "<leader>qo", ":copen<CR>") -- open quickfix list
+keymap.set("n", "<leader>qf", ":cfirst<CR>") -- jump to first quickfix list item
+keymap.set("n", "<leader>qn", ":cnext<CR>") -- jump to next quickfix list item
+keymap.set("n", "<leader>qp", ":cprev<CR>") -- jump to prev quickfix list item
+keymap.set("n", "<leader>ql", ":clast<CR>") -- jump to last quickfix list item
+keymap.set("n", "<leader>qc", ":cclose<CR>") -- close quickfix list
 
 --auto-session
 keymap.set("n", "<leader>wr", "<cmd>SessionRestore<CR>", { desc = "Restore session for cwd" }) -- restore last workspace session for current directory
@@ -65,7 +74,41 @@ vim.keymap.set("n", "<a-k>", ":wincmd k<CR>")
 vim.keymap.set("n", "<a-j>", ":wincmd j<CR>")
 vim.keymap.set("n", "<a-h>", ":wincmd h<CR>")
 vim.keymap.set("n", "<a-l>", ":wincmd l<CR>")
-vim.keymap.set("n", "<leader>/", ":CommentToggle<CR>")
+-- vim.keymap.set("n", "<leader>/", ":CommentToggle<CR>")
+
+-- Vim REST Console
+keymap.set("n", "<leader>xr", ":call VrcQuery()<CR>") -- Run REST query
+
+-- Harpoon
+-- keymap.set("n", "<leader>ha", require("fn.plugins.harpoon.mark").add_file)
+-- keymap.set("n", "<leader>hh", require("fn.plugins.harpoon.ui").toggle_quick_menu)
+-- keymap.set("n", "<leader>h1", function()
+--   require("harpoon.ui").nav_file(1)
+-- end)
+-- keymap.set("n", "<leader>h2", function()
+--   require("harpoon.ui").nav_file(2)
+-- end)
+-- keymap.set("n", "<leader>h3", function()
+--   require("harpoon.ui").nav_file(3)
+-- end)
+-- keymap.set("n", "<leader>h4", function()
+--   require("harpoon.ui").nav_file(4)
+-- end)
+-- keymap.set("n", "<leader>h5", function()
+--   require("harpoon.ui").nav_file(5)
+-- end)
+-- keymap.set("n", "<leader>h6", function()
+--   require("harpoon.ui").nav_file(6)
+-- end)
+-- keymap.set("n", "<leader>h7", function()
+--   require("harpoon.ui").nav_file(7)
+-- end)
+-- keymap.set("n", "<leader>h8", function()
+--   require("harpoon.ui").nav_file(8)
+-- end)
+-- keymap.set("n", "<leader>h9", function()
+--   require("harpoon.ui").nav_file(9)
+-- end)
 
 -- TIP: Disable arrow keys in normal mode
 vim.keymap.set("n", "<left>", '<cmd>echo "Use h to move!!"<CR>')
